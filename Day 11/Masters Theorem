@@ -1,0 +1,18 @@
+Masters theorem is a useful tool for analyzing the time complexity of divide-and-conquer algorithms, like the one you mentioned for merge sort. Let's continue discussing the cases:
+
+CASE-2:
+f(n) = Θ(n^(log(a,b) * log^k(n)))
+In this case, the work done outside the recursion is represented as Θ(n^(log(a,b) * log^k(n))).
+
+The Masters theorem provides three cases:
+
+1. If f(n) = O(n^(log(b, a) - ε)) for some ε > 0, where log(b, a) is the logarithm of a to the base b, then T(n) = Θ(n^(log(b, a)).
+
+2. If f(n) = Θ(n^(log(b, a))), then T(n) = Θ(n^(log(b, a)) * log^k(n)), where k is the smallest integer such that a^(log^k(n)) ≥ 1.
+
+3. If f(n) = Ω(n^(log(b, a) + ε)) for some ε > 0, and if a * f(n/b) ≤ cf(n) for some c < 1 and sufficiently large n, then T(n) = Θ(f(n)).
+
+For Case-2, your function f(n) falls into the second category because it is Θ(n^(log(a,b) * log^k(n))). In this case, T(n) will be Θ(n^(log(b, a)) * log^k(n)), as specified.
+
+The exact value of k depends on the specifics of your function f(n). You would need to analyze the function f(n) more precisely to determine the exact value of k.
+
